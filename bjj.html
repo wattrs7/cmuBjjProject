@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robs Super Awesome BJJ Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#Skills">Skills</a>
+      <!--<a href="#Submissions">Submissions</a>-->
+      <!--<a href="#Pins">Pins</a>-->
+      <a href="#Members">Members</a>
+      <a href="#LearnMore">LearnMore</a>
+    </div>
+
+    <section id="home">
+      <h1 style="text-align: center" id="head one">Brazillian Jiu Jitsu</h1>
+      <h2 id="intro block" style="text-align: center">
+        Intro To Brazillian Jiu Jitsu
+      </h2>
+      <p>
+        Brazillian Jiu Jitus or BJJ is a martial art that focuses on grappling.
+        As such, the core techniques of BJJ involve taking an opponent off of
+        thier feet, controlling them on the ground using pins, and ultimately
+        submitting them using joint locks or strangulation techniques.
+      </p>
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/22/GABRIEL_VELLA_vs_ROMINHO_51.jpg"
+            alt=""
+          />
+        </div>
+        <div class="carousel-slide">
+          <img
+            src="https://www.bjjee.com/wp-content/uploads/2020/10/armbar.jpg"
+            alt=""
+          />
+        </div>
+        <div class="carousel-slide">
+          <img
+            src="https://hidden-jiu-jitsu-merchandise.myshopify.com/cdn/shop/products/crosscollar_720x.png?v=1643823707"
+            alt=""
+          />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+
+      <h2>
+        If you are looking for Ninjas you are in the wrong place. Click the
+        button below to go to the nijas
+      </h2>
+      <button id="openModal">Go to Ninjas!!!!</button>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span id="closeModal"> &times;</span>
+          <p>
+            <img
+              id="modalPic"
+              src="https://thumbs.dreamstime.com/z/ninja-assassin-13488662.jpg?ct=jpeg"
+              alt=""
+            />
+          </p>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Ninja">Info about Ninjas</a>
+          </p>
+        </div>
+      </div>
+      <!--Place Carosel here-->
+    </section>
+    <section id="Skills">
+      <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'Subs')">
+          Submissions
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Pins')">Pins</button>
+        <button class="tablinks" onclick="openTab(event, 'Tab3')">
+          Takedowns
+        </button>
+      </div>
+
+      <div id="Subs" class="tabcontent" style="display: block">
+        <h3>Submissions</h3>
+        <h2 id="subs" style="text-align: center">
+          A list of the most common BJJ submission techniques
+        </h2>
+        <ul id="submission list">
+          <li id="list 1 item 1" class="listitem">Rear Naked Choke</li>
+          <p>
+            The rear naked choke accounts for 42% of all BJJ submissions in
+            tournemnts
+          </p>
+          <img
+            src="https://i0.wp.com/www.studentofbjj.com/wp-content/uploads/2017/02/rearnakedchoke.png?resize=1024%2C724&ssl=1"
+            alt="picture of RNC"
+          />
+          <li id="list 1 item 2" class="listitem">Armbar</li>
+          <p>
+            The Armbar accounts for 21% of all BJJ submission in tournements
+          </p>
+          <img
+            src="https://i0.wp.com/www.studentofbjj.com/wp-content/uploads/2017/02/armbar.png?zoom=2&resize=330%2C240&ssl=1"
+            alt="picture of armbar"
+          />
+          <li id="list 1 item 3" class="listitem">Triangle Choke</li>
+          <p>
+            The Triangle Choke accounts for 10% of all BJJ submissions in
+            tournements
+          </p>
+          <img
+            src="https://i0.wp.com/www.studentofbjj.com/wp-content/uploads/2017/02/triangle.png?zoom=2&resize=330%2C240&ssl=1"
+            alt=""
+          />
+        </ul>
+      </div>
+
+      <div id="Pins" class="tabcontent">
+        <h3>Pins</h3>
+        <h2 id="pins">List of Common Pinning Techniques</h2>
+        <ul id="pin list">
+          <li id="list 2 item 1" class="listitem">Side Mount</li>
+          <p>the most common pinning possiiton in grappling</p>
+          <img
+            src="https://i0.wp.com/www.studentofbjj.com/wp-content/uploads/2017/02/Side-Control.png?zoom=2&resize=330%2C240&ssl=1"
+            alt=""
+          />
+          <li id="list 2 item 2" class="listitem">
+            Knee on Belly</li>
+            <p>knee on belly is a common transitional pin</p>
+            <img
+              src="https://i0.wp.com/www.studentofbjj.com/wp-content/uploads/2017/02/Knee-on-Belly.png?zoom=2&resize=330%2C240&ssl=1"
+              alt=""
+            />
+          </li>
+
+          <li id="list 2 item 3" class="listitem">Full Mount</li>
+          <p>Full Mount is the most dominant pin position in BJJ</p>
+          <img
+            src="https://i0.wp.com/www.studentofbjj.com/wp-content/uploads/2017/02/Mount.png?zoom=2&resize=330%2C240&ssl=1"
+            alt=""
+          />
+        </ul>
+      </div>
+
+      <div id="Takedowns" class="tabcontent">
+        <h3>Takedowns</h3>
+        <p>Here are some common Takedowns.</p>
+      </div>
+    </section>
+
+    <section id="Members">
+      <h2>CHECK OUT OUR MEMBERS AND THEIR FAVORITE SBUMISSIONS</h2>
+      <table id="MembersTable">
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)">Name</th>
+            <th onclick="sortTable(1)">Rank</th>
+            <th onclick="sortTable(2)">Favorite Move</th>
+            <th onclick="sortTable(3)">Email Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rob Watt</td>
+            <td>Purple</td>
+            <td>Rear Naked Choke</td>
+            <td>rob@watt.com</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>BECOME A MEMBER</h2>
+      <form id="MemberSubmit" onsubmit="return validateForm()">
+        <div class="formGroup">
+          <label for="name">NAME:</label>
+          <input type="text" id="name" name="name" required />
+          <span class="error" id="nameError"></span>
+        </div>
+        <div class="formGroup">
+          <label for="rank">RANK:</label>
+          <input type="text" id="rank" name="rank" />
+          <span class="error" id="rankError"></span>
+        </div>
+        <div class="formGroup">
+          <label for="Sub">FAVORITE SUB:</label>
+          <input type="text" name="Sub" id="Sub" />
+          <span class="error" id="subError"></span>
+        </div>
+        <div class="formGroup">
+          <label for="email">EMAIL:</label>
+          <input type="text" name="email" id="email" />
+          <span class="error" id="emailError"></span>
+        </div>
+        <button type="submit">SUBMIT</button>
+      </form>
+    </section>
+
+    <section id="LearnMore">
+      <h2>For More Information Please Fill Out The Form Below</h2>
+      <form action="">
+        <textarea name="User Input" id="input form"></textarea>
+      </form>
+      <button>Submit</button>
+    </section>
+
+    <script src="scripts.js"></script>
+    <script>
+      function openTab(evt, tabName) {
+        let i = 0;
+        let tabcontent = document.getElementsByClassName("tabcontent");
+        let tablinks = document.getElementsByClassName("tablinks");
+
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
+</html>
