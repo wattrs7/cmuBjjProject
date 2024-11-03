@@ -13,7 +13,7 @@
       <!--<a href="#Submissions">Submissions</a>-->
       <!--<a href="#Pins">Pins</a>-->
       <a href="#Members">Members</a>
-      <a href="#LearnMore">LearnMore</a>
+      <!--<a href="#LearnMore">LearnMore</a>-->
     </div>
 
     <section id="home">
@@ -136,7 +136,7 @@
             alt=""
           />
           <li id="list 2 item 2" class="listitem">
-            Knee on Belly</li>
+            <p>Knee on Belly</p></li>
             <p>knee on belly is a common transitional pin</p>
             <img
               src="https://i0.wp.com/www.studentofbjj.com/wp-content/uploads/2017/02/Knee-on-Belly.png?zoom=2&resize=330%2C240&ssl=1"
@@ -181,10 +181,10 @@
       </table>
 
       <h2>BECOME A MEMBER</h2>
-      <form id="MemberSubmit" onsubmit="return validateForm()">
+      <form id="MemberSubmit" onsubmit="return validateForm(event)">
         <div class="formGroup">
           <label for="name">NAME:</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" required autocomplete="off" />
           <span class="error" id="nameError"></span>
         </div>
         <div class="formGroup">
@@ -199,20 +199,30 @@
         </div>
         <div class="formGroup">
           <label for="email">EMAIL:</label>
-          <input type="text" name="email" id="email" />
+          <input type="text" name="email" id="email" autocomplete="off" />
           <span class="error" id="emailError"></span>
         </div>
         <button type="submit">SUBMIT</button>
       </form>
     </section>
 
+    <h2>your jiu jitus progress</h2>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+  
+    <br>
+    <button onclick="move()">Click Me</button> 
+  
+<!--
     <section id="LearnMore">
       <h2>For More Information Please Fill Out The Form Below</h2>
       <form action="">
         <textarea name="User Input" id="input form"></textarea>
       </form>
       <button>Submit</button>
-    </section>
+    </section>-->
 
     <script src="scripts.js"></script>
     <script>
@@ -232,6 +242,20 @@
         document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " active";
       }
+
+      function move() {
+      var elem = document.getElementById("myBar");   
+      var width = 10;
+      var id = setInterval(frame, 100);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+        } else {
+          width++; 
+          elem.style.width = width + '%'; 
+        }
+      }
+    }
     </script>
   </body>
 </html>

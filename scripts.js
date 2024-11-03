@@ -44,13 +44,13 @@
            modal.style.display = "none";
        }
 
-       window.occlick = function(event){
+       window.onclick = function(event){
            if(event.target == modal){
                modal.style.display = "none";
            }
        }
 
-       function validateForm() {
+       function validateForm(event) {
         let valid = true;
         const name = document.getElementById("name");
         // name check
@@ -65,7 +65,7 @@
         //rank check
         const rank = document.getElementById("rank");
         if (rank.value === "") {
-          document.getElementById("rank").innerHTML =
+          document.getElementById("rankError").innerHTML =
             "Please enter a valid rank";
           valid = false;
         } else {
@@ -85,9 +85,9 @@
 
         //validate email
         
-        console.log(email.value);
+        let email = document.getElementById('email')
         if (email.value === "") {
-          document.getElementById("email").innerHTML =
+          document.getElementById("emailError").innerHTML =
             "Please enter a Valid Email";
           valid = false;
         } else if (!isValidEmail(email.value)) {
@@ -100,8 +100,9 @@
 
         if (valid) {
           addInfoToTable(name.value, rank.value, sub.value, email.value);
+          document.getElementById("MemberSubmit").reset()
         }
-        return valid;
+        return false;
       }
 
       function isValidEmail(email) {
@@ -119,3 +120,20 @@
           cell.innerHTML = content;
         });
       }
+
+      function sortTable(columnIndex) {
+        const table = document.getElementById("MembersTable");
+        const rows = Array.from(table.rows).slice(1); // Exclude header row
+    
+        rows.sort((a, b) => {
+            const cellA = a.cells[columnIndex].innerText.toLowerCase();
+            const cellB = b.cells[columnIndex].innerText.toLowerCase();
+    
+            if (cellA < cellB) return -1;
+            if (cellA > cellB) return 1;
+            return 0;
+        });
+    
+        // Reinsert sorted rows
+        rows.forEach(row => table.appendChild(row));
+    }
